@@ -3,14 +3,14 @@ import TaskInput from './TaskInput'
 import TaskDisplay from './TaskDisplay'
 import { useTodo } from '../context/TodoContext'
 import { todoReducer } from '../reducers/TodoReducers'
-function TodoMain() {
+function TodoMain({ dark }) {
     const data = useTodo()
     const [tasks, dispatch] = useReducer(todoReducer, data)
     return (
-        <>
-            <TaskInput dispatch={dispatch} />
-            <TaskDisplay tasks={tasks} dispatch={dispatch} />
-        </>
+        <div style={{ backgroundColor: dark ? "black" : "white" }}>
+            <TaskInput dispatch={dispatch} dark={dark} />
+            <TaskDisplay tasks={tasks} dispatch={dispatch} dark={dark} />
+        </div>
     )
 }
 

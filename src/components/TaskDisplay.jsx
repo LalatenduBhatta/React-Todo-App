@@ -21,7 +21,7 @@ function TaskDisplay({ tasks, dispatch }) {
                 {
                     tasks.map((task, index) => {
                         return (
-                            <div className="card">
+                            <div className="card" key={index}>
                                 <h3>{task}</h3>
                                 <div className='buttons'>
                                     <button

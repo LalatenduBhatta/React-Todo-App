@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function TaskInput({ dispatch }) {
+function TaskInput({ dispatch, dark }) {
     let [inputData, setInputData] = useState("")
     const addTask = () => {
         if (!inputData.trim()) {
@@ -13,7 +13,8 @@ function TaskInput({ dispatch }) {
     }
     return (
         <>
-            <div className="input">
+            <div className="input"
+                style={{ backgroundColor: dark && "gray" }}>
                 <input type="text" name="task" id="task"
                     placeholder='ENTER YOUR TASK HERE.....'
                     value={inputData}
