@@ -6,11 +6,14 @@ function EditModal({ closeModal, editTask, dispatch }) {
     // console.log(editTask);
     const [upadteTask, setUpadteTask] = useState(editTask.task)
     const updateHandeler = () => {
-        dispatch({
-            type: "edit",
-            payload: { task: upadteTask, index: editTask.index }
-        })
-        closeModal()
+        if (upadteTask) {
+            dispatch({
+                type: "edit",
+                payload: { task: upadteTask, index: editTask.index }
+            })
+            closeModal()
+        }
+        else alert("Task can't be empty")
     }
     return (
         <>

@@ -4,7 +4,7 @@ import { RiDeleteBin5Fill } from "react-icons/ri";
 import { FaEdit } from "react-icons/fa";
 
 
-function TaskDisplay({ tasks, dispatch }) {
+function TaskDisplay({ tasks, dispatch, dark }) {
     const [isModal, setISModal] = useState(false)
     const [editTask, setEditTask] = useState({})
 
@@ -21,7 +21,8 @@ function TaskDisplay({ tasks, dispatch }) {
                 {
                     tasks.map((task, index) => {
                         return (
-                            <div className="card" key={index}>
+                            <div className="card" key={index}
+                                style={{ boxShadow: dark && "0 0 5px white" }}>
                                 <h3>{task}</h3>
                                 <div className='buttons'>
                                     <button
