@@ -11,8 +11,8 @@
     align-items: center;
 }
 .navbar img{
-    height:50px ;
-    width: 100px;
+    height:40px ;
+    width: 80px;
     border-radius: 10px;
 }
 .navbar>div{
@@ -20,7 +20,7 @@
     font-size: 40px;
 }
 .box{
-    height: 30px;
+    height: 25px;
     background-color: white;
     width: 70px;
     border-radius:50px;
@@ -80,7 +80,7 @@
 }
 .container{
     display: grid;
-    min-height:calc(100vh - 160px);
+    min-height:calc(100vh - 155px);
     padding: 20px;
     grid-template-columns: repeat(4,1fr);
     gap: 30px;
@@ -89,9 +89,10 @@
     align-content: start;
 }
 .card{
-    background-color: rgb(249, 99, 45);
+    background-color: rgb(241, 108, 60);
     height: 100px;
     display: flex;
+    max-width: 350px;
     justify-content:space-between;
     box-shadow: 0 0 10px black;
     border-radius: 5px;
@@ -118,7 +119,7 @@ h3{
     border: none;
     box-shadow:0 0 10px inset black;
     border-radius: 4px;
-    background-color: chartreuse;
+    background-color: rgb(77, 153, 0);
 }
 .buttons>button:first-child{
     background-color: red;
@@ -217,14 +218,14 @@ h3{
         padding: 0px 10px;
     }
     .navbar img {
-        height: 40px;
-        width: 70px;
+        height: 30px;
+        width: 50px;
     }
     .navbar>div{
         font-size: 22px;
     }
     .box {
-        height: 24px;
+        height: 22px;
         width: 50px;
     }
     .isdark{
